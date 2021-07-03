@@ -1,2 +1,3 @@
-console.log("Hello world!");
-console.log("What the");
+import { AbstractFactoryDemo } from "./abstract-factory/AbstractFactoryDemo";
+
+AbstractFactoryDemo.main();
