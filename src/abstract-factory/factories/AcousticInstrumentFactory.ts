@@ -5,13 +5,16 @@ import { InstrumentType } from "../models/InstrumentType";
 import { InstrumentFactory } from "./InstrumentFactory";
 
 export class AcousticInstrumentFactory extends InstrumentFactory {
-  getInstrument(instrumentToGet: InstrumentType): Instrument | null {
+  getInstrument(
+    instrumentToGet: InstrumentType,
+    colorToGet?: string
+  ): Instrument | null {
     switch (instrumentToGet) {
       case InstrumentType.Guitar: {
-        return new AcousticGuitar();
+        return new AcousticGuitar(colorToGet);
       }
       case InstrumentType.Bass: {
-        return new AcousticBass();
+        return new AcousticBass(colorToGet);
       }
       default:
         return null;

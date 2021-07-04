@@ -5,13 +5,16 @@ import { InstrumentType } from "../models/InstrumentType";
 import { InstrumentFactory } from "./InstrumentFactory";
 
 export class ElectricInstrumentFactory extends InstrumentFactory {
-  getInstrument(instrumentToGet: InstrumentType): Instrument | null {
+  getInstrument(
+    instrumentToGet: InstrumentType,
+    colorToGet?: string
+  ): Instrument | null {
     switch (instrumentToGet) {
       case InstrumentType.Guitar: {
-        return new ElectricGuitar();
+        return new ElectricGuitar(colorToGet);
       }
       case InstrumentType.Bass: {
-        return new ElectricBass();
+        return new ElectricBass(colorToGet);
       }
       default:
         return null;

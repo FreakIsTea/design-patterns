@@ -8,6 +8,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
+    "strictPropertyInitialization": true,
     "outDir": "build",
     "rootDir": "src",
     "noImplicitAny": true,

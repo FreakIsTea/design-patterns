@@ -7,23 +7,26 @@ export class AbstractFactoryDemo {
     let producer = new FactoryProducer();
 
     // Get electric factory and check objects
-    console.log("Getting electric instruments");
+    console.log("\nGetting electric instruments\n");
     let eFactory = producer.getFactory(FactoryType.Electric);
     if (eFactory != null) {
-      let eGuitar = eFactory.getInstrument(InstrumentType.Guitar);
-      eGuitar != null ? eGuitar.makeSound() : () => {};
+      let eGuitar = eFactory.getInstrument(
+        InstrumentType.Guitar,
+        "red striped"
+      );
+      eGuitar != null ? eGuitar.makeSound() : null;
       let eBass = eFactory.getInstrument(InstrumentType.Bass);
-      eBass != null ? eBass.makeSound() : () => {};
+      eBass != null ? eBass.makeSound() : null;
     }
 
     // Same for acoustic factory
-    console.log("Getting acoustic instruments");
+    console.log("\n\nGetting acoustic instruments\n");
     let aFactory = producer.getFactory(FactoryType.Acoustic);
     if (aFactory != null) {
-      let aGuitar = aFactory.getInstrument(InstrumentType.Guitar);
-      aGuitar != null ? aGuitar.makeSound() : () => {};
+      let aGuitar = aFactory.getInstrument(InstrumentType.Guitar, "yellow");
+      aGuitar != null ? aGuitar.makeSound() : null;
       let aBass = aFactory.getInstrument(InstrumentType.Bass);
-      aBass != null ? aBass.makeSound() : () => {};
+      aBass != null ? aBass.makeSound() : null;
     }
   }
 }
