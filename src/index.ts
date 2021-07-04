@@ -1,3 +1,6 @@
 import { AbstractFactoryDemo } from "./abstract-factory/AbstractFactoryDemo";
+import { BuilderDemo } from "./builder-pattern/BuilderDemo";
 
-AbstractFactoryDemo.main();
+// AbstractFactoryDemo.main();
+
+BuilderDemo.main();
