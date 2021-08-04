@@ -17,3 +17,7 @@ Creational Patterns deal with the instantiation of objects. They provide an abst
 ### 1.1 Abstract Factory
 
 An abstract factory is a pattern, which is used when there is a family of objects. The family of objects may have a certain behaviour or look for certain parts of the application, but may need to be adjusted for another part. The factory defines how an object should be built, but not how. It delegates the implementation to the subclasses and thus, there can be multiple implementations of the same model.
+
+### Prototype
+
+The prototype design pattern is used in environments, where a client should be able to create new (custom) objects from composing old objects. The prototypes must implement one method: `clone()`. Every object needs to be able to clone itself, so that the custom prototypes can be recreated using the clone methods of the existing prototypes. To be able to access the custom prototypes, a prototype manager is implemented. The prototype manager is often just a simple registry (key - value), so that the prototypes can be accessed easily.
