@@ -1,3 +1,3 @@
-import { AbstractFactoryDemo } from "./abstract-factory/AbstractFactoryDemo";
+// import { AbstractFactoryDemo } from "./abstract-factory/AbstractFactoryDemo";
 
-AbstractFactoryDemo.main();
+// AbstractFactoryDemo.main();
